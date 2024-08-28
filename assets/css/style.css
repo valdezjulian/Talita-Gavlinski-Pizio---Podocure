@@ -1,0 +1,709 @@
+
+/*  ------------ RESET ------------- */
+/* Define um reset básico para todos os elementos */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura dos elementos */
+ }
+ 
+ ul {
+    list-style: none; /* Remove os marcadores padrão das listas não ordenadas */
+ }
+ 
+ a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+ }
+ 
+ img {
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do elemento pai */
+    height: auto; /* Ajusta a altura da imagem proporcionalmente à largura */
+ }
+ 
+ 
+ /*  ------------ VARIABLES ------------- */
+ /* Define variáveis CSS para facilitar a manutenção e a consistência do estilo */
+ 
+ /* Variáveis para altura do cabeçalho */
+ :root {
+    --header-height: 4.5rem; /* Altura do cabeçalho */
+ 
+ /* Cores */
+    --hue: 349; /* Matiz para a cor base (HSL) */
+    --base-color: #3AA79B; /* Cor base principal */
+    --base-color-second: #3AA79B; /* Cor base secundária, pode ser a mesma ou diferente */
+    --base-color-alt: #0D4739; /* Cor alternativa para a base, usada para contraste */
+    --title-color: hsl(var(--hue) 41% 10%); /* Cor para títulos, usando a matiz definida */
+    --text-color: hsl(0 0% 46%); /* Cor do texto principal */
+    --text-color-light: hsl(0 0% 98%); /* Cor do texto em fundos claros */
+    --body-color: hsl(0 0% 98%); /* Cor de fundo do corpo do documento */
+ 
+ /* Tipografia */
+    --title-font-size: 1.875rem; /* Tamanho da fonte para títulos */
+    --subtitle-font-size: 1rem; /* Tamanho da fonte para subtítulos */
+    --title-font: 'Poppins', sans-serif; /* Fonte para títulos */
+    --body-font: 'DM Sans', sans-serif; /* Fonte para o corpo do texto */
+ }
+ 
+ /* ------------- BASE -------------*/
+ /* Estilos básicos e configurações globais */
+ 
+ 
+ 
+ /* Configura o comportamento do scroll para ser suave */
+ html {
+    scroll-behavior: smooth;
+ }
+ 
+ /* Estilos gerais para o corpo da página */
+ body {
+    font: 400 1rem var(--body-font); /* Define a fonte do corpo com peso 400 e tamanho 1rem */
+    color: var(--text-color); /* Cor do texto principal */
+    background: var(--body-color); /* Cor de fundo do corpo */
+    -webkit-font-smoothing: antialiased; /* Melhora a renderização da fonte em navegadores WebKit */
+ }
+ 
+ /* Contêiner para o logo, alinhado verticalmente no centro */
+ .logo-container {
+    display: flex; /* Utiliza Flexbox para alinhamento */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    width: 5rem; /* Largura fixa do contêiner do logo */
+ }
+ 
+ /* Estilos para os títulos */
+ .title {
+    font: 700 var(--title-font-size) var(--title-font); /* Fonte em negrito para títulos */
+    color: var(--title-color); /* Cor do título */
+    -webkit-font-smoothing: auto; /* Melhora a renderização da fonte */
+ }
+ 
+ /* Estilos para os botões */
+ .button {
+    background-color: var(--base-color); /* Cor de fundo do botão */
+    color: var(--text-color-light); /* Cor do texto do botão */
+    height: 3.5rem; /* Altura do botão */
+    display: inline-flex; /* Utiliza Flexbox para alinhamento interno */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 0 2rem; /* Espaçamento interno do botão */
+    border-radius: 0.25rem; /* Bordas arredondadas do botão */
+    font: 500 1rem var(--body-font); /* Fonte do texto do botão */
+    transition: background .3s; /* Transição suave para a cor de fundo */
+ }
+ 
+ /* Estilo para o botão quando o cursor está sobre ele */
+ .button:hover {
+    background: var(--base-color-alt); /* Cor de fundo alterada quando o botão é hover */
+ }
+ 
+ /* Estilos para divisores (linhas horizontais) */
+ .divider-1, .divider-2 {
+    height: 1px; /* Altura do divisor */
+    background: #3AA79B; /* Cor do divisor */
+    width: 100%; /* Largura total do divisor */
+    max-width: 1500px; /* Largura máxima do divisor */
+ }
+ 
+ /*  ------------ LAYOUT ------------- */
+ /* Estilos relacionados ao layout geral da página */
+ 
+ /* Contêiner principal para centralizar e limitar a largura do conteúdo */
+ .container {
+    margin-left: 1.5rem; /* Margem esquerda */
+    margin-right: 1.5rem; /* Margem direita */
+    width: 100%; /* Largura total do contêiner */
+    max-width: 1500px; /* Largura máxima do contêiner */
+ }
+ 
+ /* Estilos para o layout de grade (grid) */
+ .grid {
+    display: grid; /* Define o contêiner como grid */
+    gap: 2rem; /* Espaçamento entre os itens da grid */
+ }
+ 
+ /* Estilos para seções, incluindo margem superior e inferior */
+ .section {
+    padding: calc(5rem + var(--header-height)) 0; /* Espaçamento superior inclui altura do cabeçalho */
+    width: 100%; /* Largura total da seção */
+    max-width: 1500px; /* Largura máxima da seção */
+ }
+ 
+ /* Margem inferior dos títulos dentro das seções */
+ .section .title {
+    margin-bottom: 1rem; /* Margem abaixo do título */
+ }
+ 
+ /* Tamanho da fonte para os subtítulos dentro das seções */
+ .section .subtitle {
+    font-size: var(--subtitle-font-size); /* Tamanho da fonte dos subtítulos */
+ }
+ 
+ /* Cor do texto em negrito dentro de cabeçalhos de seção */
+ .section header strong {
+    color: var(--base-color); /* Cor do texto em negrito */
+ }
+ 
+ /* Estilos para o cabeçalho fixo na parte superior da página */
+ #header {
+    border-bottom: 1px solid #e4e4e4; /* Borda inferior do cabeçalho */
+    margin-bottom: 2rem; /* Margem inferior do cabeçalho */
+    display: flex; /* Utiliza Flexbox para alinhamento interno */
+ 
+    width: 100%; /* Largura total do cabeçalho */
+    max-width: 1500px; /* Largura máxima do cabeçalho */
+    position: fixed; /* Cabeçalho fixo na parte superior */
+    top: 0; /* Alinhado ao topo da página */
+    left: 0; /* Alinhado à esquerda da página */
+    z-index: 100; /* Prioridade de empilhamento para o cabeçalho */
+    background-color: var(--body-color); /* Cor de fundo do cabeçalho */
+ }
+ 
+ /* Estilos aplicados ao cabeçalho quando ele tem a classe 'scroll' */
+ #header.scroll {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra ao cabeçalho quando a classe 'scroll' está presente */
+ }
+ 
+ /*  ------------ LOGO ------------- */
+ /* Estilos para o logotipo principal */
+ .logo {
+    font: 700 1.31rem var(--title-font); /* Define a fonte e o tamanho do texto para o logotipo principal */
+    color: var(--title-color); /* Define a cor do texto do logotipo principal */
+ }
+ 
+ /* Estilos para a parte colorida do logotipo */
+ .logo span {
+    color: var(--base-color); /* Define a cor do texto dentro da tag <span> do logotipo */
+ }
+ 
+ /* Estilos para o logotipo alternativo (por exemplo, em fundos escuros) */
+ .logo-alt span {
+    color: var(--body-color); /* Define a cor do texto dentro da tag <span> do logotipo alternativo */
+ }
+ 
+ /*  ------------ NAVIGATION ------------- */
+ /* Estilos para o elemento de navegação */
+ nav {
+    height: var(--header-height); /* Define a altura do menu de navegação */
+    display: flex; /* Utiliza flexbox para alinhamento */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: space-between; /* Espaça itens horizontalmente */
+    width: 100%; /* Define a largura total do menu de navegação */
+ }
+ 
+ /* Estilos para itens da lista dentro do menu de navegação */
+ nav ul li {
+    text-align: center; /* Alinha o texto dos itens da lista ao centro */
+ }
+ 
+ /* Estilos para links dentro dos itens da lista */
+ nav ul li a {
+    transition: color .2s; /* Adiciona transição suave na mudança de cor */
+    position: relative; /* Permite o posicionamento absoluto dos pseudo-elementos */
+ }
+ 
+ /* Estilos para links quando estão em foco ou ativos */
+ nav ul li a:hover,
+ nav ul li a.active {
+    color: var(--base-color); /* Altera a cor do texto para a cor base */
+ }
+ 
+ /* Estilo para o pseudo-elemento ::after nos links */
+ nav ul li a::after {
+    content: ''; /* Cria um pseudo-elemento vazio */
+    width: 0%; /* Define a largura inicial do pseudo-elemento */
+    height: 2px; /* Define a altura do pseudo-elemento */
+    background: var(--base-color); /* Define a cor de fundo do pseudo-elemento */
+    position: absolute; /* Posiciona o pseudo-elemento de forma absoluta */
+    left: 0; /* Alinha o pseudo-elemento ao lado esquerdo */
+    bottom: -1.5rem; /* Posiciona o pseudo-elemento abaixo do texto */
+    transition: width 0.2s; /* Adiciona transição suave na mudança de largura */
+ }
+ 
+ /* Estilos para o pseudo-elemento ::after em links ao passar o mouse ou quando ativo */
+ nav ul li a:hover::after,
+ nav ul li a.active::after {
+    width: 100%; /* Expande a largura do pseudo-elemento ao passar o mouse ou quando ativo */
+ }
+ 
+ /* Estilos para o menu de navegação oculto inicialmente */
+ nav .menu {
+    opacity: 0; /* Torna o menu invisível */
+    visibility: hidden; /* Oculta o menu para que não afete o layout */
+    top: -20rem; /* Posiciona o menu fora da tela */
+    transition: 0.2s; /* Adiciona transição suave na visibilidade */
+ }
+ 
+ /* Estilos para a lista de itens dentro do menu */
+ nav .menu ul {
+    display: none; /* Oculta a lista de itens no menu */
+ }
+ 
+ /* Estilos para mostrar o menu quando a classe .show está aplicada */
+ nav.show .menu {
+    opacity: 1; /* Torna o menu visível */
+    visibility: visible; /* Torna o menu visível para que afete o layout */
+    background: var(--body-color); /* Define o fundo do menu */
+    height: 100vh; /* Define a altura do menu para ocupar toda a tela */
+    width: 100vw; /* Define a largura do menu para ocupar toda a tela */
+    position: fixed; /* Torna o menu fixo na tela */
+    top: 0; /* Alinha o menu ao topo da tela */
+    left: 0; /* Alinha o menu ao lado esquerdo da tela */
+    display: grid; /* Utiliza grid para o layout interno do menu */
+    place-content: center; /* Centraliza o conteúdo dentro do menu */
+ }
+ 
+ /* Estilos para a lista de itens dentro do menu quando visível */
+ nav.show .menu ul {
+    display: grid; /* Exibe a lista como grid */
+ }
+ 
+ /* Estilos para a lista de itens dentro do menu quando visível com espaçamento */
+ nav.show ul.grid {
+    gap: 4rem; /* Define o espaçamento entre os itens da lista */
+ }
+ 
+ /* Estilos para o botão de alternância do menu */
+ .toggle {
+    color: var(--base-color); /* Define a cor do botão de alternância */
+    font-size: 1.5rem; /* Define o tamanho da fonte do botão */
+    cursor: pointer; /* Define o cursor como ponteiro ao passar sobre o botão */
+ }
+ 
+ /* Estilos para o ícone de fechar o menu */
+ nav .icon-close {
+    visibility: hidden; /* Torna o ícone invisível */
+    opacity: 0; /* Torna o ícone invisível */
+    position: absolute; /* Posiciona o ícone de forma absoluta */
+    top: -1.5rem; /* Posiciona o ícone fora da tela no topo */
+    right: 1.5rem; /* Alinha o ícone ao lado direito da tela */
+    transition: 0.2s; /* Adiciona transição suave na visibilidade */
+ }
+ 
+ /* Estilos para o ícone de fechar o menu quando a classe .show está aplicada */
+ nav.show div.icon-close {
+    visibility: visible; /* Torna o ícone visível */
+    opacity: 1; /* Torna o ícone visível */
+    top: 1.5rem; /* Posiciona o ícone visível no topo */
+ }
+ 
+ 
+ /*  ------------ HOME ------------- */
+ /* Estilos para o contêiner principal da seção HOME */
+ #home {
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites do contêiner */
+ }
+ 
+ /* Estilos para o contêiner dentro da seção HOME */
+ #home .container {
+    margin: 0; /* Remove as margens do contêiner */
+ }
+ 
+ /* Estilos para a imagem dentro da seção HOME */
+ #home .image {
+    position: relative; /* Permite o posicionamento absoluto dos pseudo-elementos */
+ }
+ 
+ /* Estilos para o pseudo-elemento ::before da imagem */
+ #home .image::before {
+    content: ''; /* Cria um pseudo-elemento vazio */
+    height: 100%; /* Define a altura do pseudo-elemento para cobrir a imagem */
+    width: 100%; /* Define a largura do pseudo-elemento para cobrir a imagem */
+    background: var(--base-color-second); /* Define a cor de fundo do pseudo-elemento */
+    position: absolute; /* Posiciona o pseudo-elemento de forma absoluta */
+    top: -16.8%; /* Posiciona o pseudo-elemento um pouco acima da imagem */
+    left: 16.7%; /* Posiciona o pseudo-elemento um pouco à direita da imagem */
+    z-index: 0; /* Define a camada de empilhamento para ficar atrás do conteúdo */
+ }
+ 
+ /* Estilos para a imagem dentro da seção HOME */
+ #home .image img {
+    position: relative; /* Permite que a imagem seja posicionada em relação ao seu contêiner */
+    right: 2.93rem; /* Ajusta a posição da imagem para a esquerda */
+ }
+ 
+ /* Estilos para a imagem e o pseudo-elemento ::before com borda arredondada */
+ #home .image img,
+ #home .image::before {
+    border-radius: 0.25rem; /* Aplica bordas arredondadas */
+ }
+ 
+ /* Estilos para o texto dentro da seção HOME */
+ #home .text {
+    margin-left: 1.5rem; /* Define a margem esquerda do texto */
+    margin-right: 1.5rem; /* Define a margem direita do texto */
+    text-align: center; /* Centraliza o texto horizontalmente */
+ }
+ 
+ /* Estilos para o título dentro da seção HOME */
+ #home .text h1 {
+    margin-bottom: 1rem; /* Adiciona margem abaixo do título */
+ }
+ 
+ /* Estilos para o parágrafo dentro da seção HOME */
+ #home .text p {
+    margin-bottom: 2rem; /* Adiciona margem abaixo do parágrafo */
+ }
+ 
+ /* Estilos específicos para o texto com a classe .p-saúde */
+ .p-saúde {
+    font-size: 3rem; /* Define o tamanho da fonte para o texto */
+    color: #3AA79B; /* Define a cor do texto */
+ }
+ 
+ /*  ------------ ABOUT ------------- */
+ /* Estilos para a seção ABOUT */
+ #about {
+    background: white; /* Define o fundo da seção como branco */
+ }
+ 
+ /* Estilos para o contêiner dentro da seção ABOUT */
+ #about .container {
+    margin: 0; /* Remove as margens do contêiner */
+ }
+ 
+ /* Estilos para a imagem dentro da seção ABOUT */
+ #about .image {
+    position: relative; /* Permite o posicionamento absoluto dos pseudo-elementos */
+ }
+ 
+ /* Estilos para o pseudo-elemento ::before da imagem */
+ #about .image::before {
+    content: ''; /* Cria um pseudo-elemento vazio */
+    height: 100%; /* Define a altura do pseudo-elemento para cobrir a imagem */
+    width: 100%; /* Define a largura do pseudo-elemento para cobrir a imagem */
+    background: var(--base-color-second); /* Define a cor de fundo do pseudo-elemento */
+    position: absolute; /* Posiciona o pseudo-elemento de forma absoluta */
+    top: -8.3%; /* Posiciona o pseudo-elemento um pouco acima da imagem */
+    left: -33%; /* Posiciona o pseudo-elemento um pouco à esquerda da imagem */
+    z-index: 0; /* Define a camada de empilhamento para ficar atrás do conteúdo */
+ }
+ 
+ /* Estilos para a imagem dentro da seção ABOUT */
+ #about .image img {
+    position: relative; /* Permite que a imagem seja posicionada em relação ao seu contêiner */
+ }
+ 
+ /* Estilos para a imagem e o pseudo-elemento ::before com borda arredondada */
+ #about .image img,
+ #about .image::before {
+    border-radius: 0.25rem; /* Aplica bordas arredondadas */
+ }
+ 
+ /* Estilos para o texto dentro da seção ABOUT */
+ #about .text {
+    margin-left: 1.5rem; /* Define a margem esquerda do texto */
+    margin-right: 1.5rem; /* Define a margem direita do texto */
+ }
+ 
+ /*  ------------ SERVICES ------------- */
+ /* Estilos para o grid de cartões na seção SERVICES */
+ .cards.grid {
+    gap: 1.5rem; /* Define o espaçamento entre os cartões no grid */
+ }
+ 
+ /* Estilos para cada cartão na seção SERVICES */
+ .card {
+    padding: 3.625rem 2rem; /* Define o preenchimento interno do cartão */
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08); /* Adiciona uma sombra sutil ao cartão */
+    border-bottom: .25rem solid var(--base-color); /* Adiciona uma borda inferior colorida ao cartão */
+    border-radius: .25rem .25rem 0 0; /* Aplica bordas arredondadas ao topo do cartão */
+    text-align: center; /* Centraliza o texto dentro do cartão */
+ }
+ 
+ /* Estilos para o ícone dentro do cartão */
+ .card i {
+    display: block; /* Exibe o ícone como um bloco */
+    margin-bottom: 1.5rem; /* Adiciona uma margem inferior ao ícone */
+    font-size: 5rem; /* Define o tamanho da fonte do ícone */
+    color: var(--base-color); /* Define a cor do ícone */
+ }
+ 
+ /* Estilos para o título dentro do cartão */
+ .card .title {
+    font-size: 1.5rem; /* Define o tamanho da fonte do título */
+    margin-bottom: 0.75rem; /* Adiciona uma margem inferior ao título */
+ }
+ 
+ .img-services {
+    border-radius: 50%;
+ }
+ 
+ /*  ------------ TESTIMONIALS ------------- */
+ 
+ /* Estilos para o container do Swiper */
+ .swiper-container {
+    width: 100%; /* Define a largura do container como 100% */
+    padding-top: 1rem; /* Adiciona um preenchimento no topo do container */
+    padding-bottom: 1rem; /* Adiciona um preenchimento na parte inferior do container */
+ }
+ 
+ /* Estilos para cada slide do Swiper */
+ .swiper-slide {
+    display: flex; /* Utiliza flexbox para layout */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: center; /* Alinha itens horizontalmente ao centro */
+    height: auto; /* Define a altura como automática */
+    padding: 1rem; /* Adiciona um preenchimento interno ao slide */
+ }
+ 
+ /* Estilos para a paginação do Swiper */
+ .swiper-pagination {
+    position: absolute; /* Posiciona a paginação de forma absoluta */
+    bottom: 0; /* Alinha a paginação ao fundo do container */
+    text-align: center; /* Centraliza o texto dentro da paginação */
+    width: 100%; /* Define a largura da paginação como 100% */
+    padding: 0.5rem 0; /* Adiciona um preenchimento vertical à paginação */
+ }
+ 
+ /* Estilos para os bullets da paginação */
+ .swiper-pagination-bullet {
+    background: var(--base-color); /* Define a cor de fundo dos bullets */
+ }
+ 
+ /* Estilos para o bullet ativo da paginação */
+ .swiper-pagination-bullet-active {
+    background: var(--base-color-alt); /* Define a cor de fundo do bullet ativo */
+ }
+ 
+ /* Estilos para o blockquote na seção TESTIMONIALS */
+ #testimonials blockquote {
+    padding: 1rem; /* Adiciona um preenchimento interno ao blockquote */
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08); /* Adiciona uma sombra sutil ao blockquote */
+    border-radius: 0.25rem; /* Aplica bordas arredondadas ao blockquote */
+    background: #fff; /* Define o fundo do blockquote como branco */
+ }
+ 
+ /* Estilos para o parágrafo dentro do blockquote */
+ #testimonials blockquote p {
+    position: relative; /* Define o posicionamento relativo para o parágrafo */
+    text-indent: 2rem; /* Adiciona um recuo à esquerda do texto */
+ }
+ 
+ /* Estilos para o elemento span dentro do parágrafo do blockquote */
+ #testimonials blockquote p span {
+    font: 700 2.5rem serif; /* Define o estilo da fonte como negrito e o tamanho da fonte */
+    position: absolute; /* Posiciona o span de forma absoluta */
+    top: -0.5rem; /* Alinha o span ao topo do blockquote */
+    left: -1.5rem; /* Alinha o span à esquerda do blockquote */
+    color: var(--base-color); /* Define a cor do texto do span */
+ }
+ 
+ /* Estilos para o elemento cite na seção TESTIMONIALS */
+ #testimonials cite {
+    display: flex; /* Utiliza flexbox para layout */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    font-style: normal; /* Remove o estilo de itálico do texto */
+    margin-top: 1rem; /* Adiciona uma margem superior ao cite */
+ }
+ 
+ /* Estilos para a imagem dentro do elemento cite */
+ #testimonials cite img {
+    width: 2rem; /* Define a largura da imagem */
+    height: 2rem; /* Define a altura da imagem */
+    object-fit: cover; /* Garante que a imagem cubra o elemento sem distorção */
+    clip-path: circle(); /* Aplica um recorte circular à imagem */
+    margin-right: 0.5rem; /* Adiciona uma margem à direita da imagem */
+ }
+ 
+ /* (Comentário repetido) Estilos para o bullet ativo da paginação */
+ .swiper-pagination-bullet-active {
+    background: var(--base-color); /* Define a cor de fundo do bullet ativo */
+ }
+ 
+ /*  ------------ CONTACT ------------- */
+ 
+ /* Estilos para o grid na seção CONTACT */
+ #contact .grid {
+    gap: 4rem; /* Define um espaçamento de 4rem entre os itens do grid */
+ }
+ 
+ /* Estilos para os parágrafos dentro da classe .text na seção CONTACT */
+ #contact .text p {
+    margin-bottom: 2rem; /* Adiciona uma margem inferior de 2rem aos parágrafos */
+ }
+ 
+ /* Estilos para os ícones dentro dos botões e listas na seção CONTACT */
+ #contact .button i,
+ #contact ul li i {
+    font-size: 1.5rem; /* Define o tamanho da fonte dos ícones como 1.5rem */
+    margin-right: 0.625rem; /* Adiciona uma margem à direita dos ícones */
+ }
+ 
+ /* Estilos para o grid na lista dentro da seção CONTACT */
+ #contact ul.grid {
+    gap: 2rem; /* Define um espaçamento de 2rem entre os itens do grid */
+ }
+ 
+ /* Estilos para os itens da lista dentro da seção CONTACT */
+ #contact ul li {
+    display: flex; /* Utiliza flexbox para layout dos itens da lista */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+ }
+ 
+ /* Estilos para os ícones dentro dos itens da lista na seção CONTACT */
+ #contact ul li i {
+    color: var(--base-color); /* Define a cor dos ícones como a cor base definida na variável */
+ }
+ 
+ /* Estilos gerais para o mapa embutido (iframe) */
+ iframe {
+    width: 600px; /* Define a largura do iframe como 600px */
+    height: 350px; /* Define a altura do iframe como 350px */
+    border: none; /* Remove a borda padrão do iframe */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao iframe */
+ }
+ 
+ /*  ------------ FOOTER ------------- */
+ 
+ /* Estilos gerais para o rodapé */
+ footer {
+    background-color: var(--base-color); /* Define a cor de fundo do rodapé com a cor base definida na variável */
+ }
+ 
+ /* Estilos para a seção dentro do rodapé */
+ footer.section {
+    padding: 4rem 0; /* Adiciona um padding de 4rem em cima e embaixo da seção do rodapé */
+ }
+ 
+ /* Estilos para o logotipo dentro do rodapé */
+ footer .logo {
+    display: inline-block; /* Define o logotipo como um bloco em linha */
+    margin-bottom: 1.5rem; /* Adiciona uma margem inferior de 1.5rem ao logotipo */
+ }
+ 
+ /* Estilos para o parágrafo dentro da marca do rodapé */
+ footer .brand p {
+    color: var(--text-color-light); /* Define a cor do texto como a cor de texto clara definida na variável */
+    margin-bottom: 0.75rem; /* Adiciona uma margem inferior de 0.75rem ao parágrafo */
+ }
+ 
+ /* Estilos para o contêiner de redes sociais dentro do rodapé */
+ footer .social {
+    grid-auto-flow: column; /* Define o fluxo automático da grid como coluna */
+    width: fit-content; /* Define a largura como o tamanho do conteúdo */
+ }
+ 
+ /* Estilos para os links dentro do contêiner de redes sociais */
+ footer .social a {
+    transition: 0.3s; /* Adiciona uma transição de 0.3s para efeitos de hover */
+    display: inline-block; /* Define os links como blocos em linha */
+ }
+ 
+ /* Estilos para os links de redes sociais ao passar o mouse (hover) */
+ footer .social a:hover {
+    transform: translateY(-8px); /* Move o link 8px para cima ao passar o mouse */
+ }
+ 
+ /* Estilos para o parágrafo com a classe .paragrafo-footer */
+ .paragrafo-footer {
+    color: var(--text-color-light); /* Define a cor do texto como a cor de texto clara definida na variável */
+    font-size: 16px; /* Define o tamanho da fonte como 16px */
+    position: absolute; /* Define a posição como absoluta para posicionamento específico */
+    height: 35px; /* Define a altura do elemento como 35px */
+    padding-top: 65px; /* Adiciona um padding superior de 65px */
+    font-family: 'DM Sans', sans-serif; /* Define a fonte como 'DM Sans' */
+ }
+ 
+ /* Estilos para ícones do Instagram dentro do rodapé */
+ .instagram {
+    width: 4rem; /* Define a largura do ícone como 4rem */
+ }
+ 
+ /*  ------------ BACK TO TOP ------------- */
+ 
+ /* Estilos para o botão de "Voltar ao topo" */
+ .back-to-top {
+    background: var(--base-color); /* Define a cor de fundo do botão com a cor base definida na variável */
+    color: var(--text-color-light); /* Define a cor do texto como a cor de texto clara definida na variável */
+ 
+    position: fixed; /* Define o botão como fixo em relação à janela de visualização */
+    right: 1rem; /* Posiciona o botão 1rem a partir da borda direita */
+    bottom: 1rem; /* Posiciona o botão 1rem a partir da borda inferior */
+ 
+    padding: 0.5rem; /* Adiciona um padding de 0.5rem ao redor do botão */
+    clip-path: circle(); /* Define o formato do botão como um círculo */
+ 
+    font-size: 1.5rem; /* Define o tamanho da fonte como 1.5rem */
+    line-height: 0; /* Define a altura da linha como 0 para centralizar o ícone verticalmente */
+ 
+    visibility: hidden; /* Torna o botão invisível por padrão */
+    opacity: 0; /* Define a opacidade como 0 por padrão */
+ 
+    transition: 0.3s; /* Adiciona uma transição de 0.3s para alterações de visibilidade e opacidade */
+    transform: translateY(100%); /* Move o botão 100% para fora da tela no eixo Y */
+ }
+ 
+ /* Estilos para o botão de "Voltar ao topo" quando visível */
+ .back-to-top.show {
+    visibility: visible; /* Torna o botão visível */
+    opacity: 1; /* Define a opacidade como 1 */
+    transform: translateY(0); /* Move o botão para sua posição original no eixo Y */
+ }
+ 
+ 
+ 
+ 
+ 
+ /* --- MODE DARK --- */
+ 
+ /* ==============================================================================
+ /* *** Inativado ***
+ 
+ 
+ /* body.dark-mode { 
+    background-color: #121212; /* Cor de fundo escura */
+ /*   color: #e0e0e0; /* Cor do texto clara */ 
+ /*}
+ 
+ /* Cabeçalho e Rodapé */
+ /*body.dark-mode header,
+ body.dark-mode footer {
+    background-color: #1f1f1f; /* Cor de fundo escura para o header e footer */
+ /*}
+ 
+ /* Cartões e Caixas */
+ /*body.dark-mode .card {
+    background-color: #333; /* Cor de fundo escura para cartões */
+ /*   color: #e0e0e0; /* Cor do texto clara em cartões */
+ /*}
+ 
+ /* Links e Botões */
+ /*body.dark-mode a {
+    color: #bb86fc; /* Cor dos links */
+ /*}
+ 
+ body.dark-mode button {
+    background-color: #6200ee; /* Cor de fundo dos botões */
+ /*   color: #ffffff; /* Cor do texto dos botões */
+ /*}
+ 
+ /* Bordas e Separadores */
+ /*body.dark-mode .border {
+    border-color: #444444; /* Cor das bordas e separadores */
+ /*}
+ 
+ /* Menu Principal */
+ /*body.dark-mode nav {
+    background-color: #1f1f1f; /* Cor de fundo do menu */
+ /*}
+ 
+ /* Links do Menu */
+ /*body.dark-mode nav ul li a {
+    color: #e0e0e0; /* Cor dos links no menu */
+ /*}
+ 
+ /* Estilo dos itens do menu ao passar o mouse */
+ /*body.dark-mode nav ul li a:hover {
+    color: #bb86fc; /* Cor dos links ao passar o mouse */
+ /*   background-color: #333333; /* Fundo dos itens ao passar o mouse (opcional) */
+ /*}
+ 
+ /* Menu ativo */
+ /*body.dark-mode nav ul li a.active {
+    color: #03dac6; /* Cor do link ativo no menu */
+ /*}
+ 
+ 
+ /* *** Inativado *** 
+ /* ==============================================================================
+ 
+ 
