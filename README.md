@@ -1,6 +1,6 @@
 <h1>👣 Talita Gavlinski Pizio - Podocure</h1>
 
-Este website foi desenvolvido para a profissional de podocure, <a href="https://www.instagram.com/talitapiziopodocure">Talita Gavlinski Pizio</a>.<br> 
+Este website foi desenvolvido para a profissional de podocure, <a href="https://www.instagram.com/talitapizio.podocure">Talita Gavlinski Pizio</a>.<br> 
 O objetivo é apresentar seus serviços especializados em cuidados com a saúde e o bem-estar dos pés.
 <br>
 <br>
