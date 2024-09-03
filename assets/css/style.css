@@ -443,6 +443,7 @@
     justify-content: center; /* Alinha itens horizontalmente ao centro */
     height: auto; /* Define a altura como automática */
     padding: 1rem; /* Adiciona um preenchimento interno ao slide */
+    cursor: grab;
  }
  
  /* Estilos para a paginação do Swiper */
