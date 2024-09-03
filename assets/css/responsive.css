@@ -2,171 +2,168 @@
 
 /* extra large devices: 1200px e acima */
 @media (min-width: 1200px) {
-
-   /* Ajusta a largura máxima do contêiner e centraliza o conteúdo */
-   .container {
-      max-width: 1120px;
-      margin-left: auto;
-      margin-right: auto;
-   }
-
-   /* Aumenta o padding das seções */
-   .section {
-      padding: 10rem 0;
-   }
-
-   /* Centraliza o texto no cabeçalho das seções e depoimentos */
-   .section header,
-   #testimonials header {
-      max-width: 32rem;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-   }
-
-   /* Ajusta a altura do botão */
-   .button {
-      height: 3.125rem;
-   }
-
-   /* Torna o menu de navegação visível e ajusta o layout do menu */
-   nav .menu {
-      opacity: 1;
-      visibility: visible;
-      top: 0;
-   }
-
-   nav .menu ul {
-      display: flex;
-      gap: 2rem;
-   }
-
-   nav .menu ul li a.title {
-      font: 400 1rem var(--body-font);
-      -webkit-font-smoothing: antialiased;
-   }
-
-   nav .menu ul li a.title.active {
-      font-weight: bold;
-      -webkit-font-smoothing: auto;
-   }
-
-   /* Oculta o ícone do menu */
-   nav .icon-menu {
-      display: none;
-   }
-
-   /* Ajusta a margem superior do conteúdo principal para compensar o cabeçalho fixo */
-   main {
-      margin-top: var(--header-height);
-   }
-
-   /* Home: Ajusta a disposição do texto e da imagem */
-   #home .container {
-      grid-auto-flow: column;
-      justify-content: space-between;
-      margin: 0 auto;
-   }
-
-   #home .image {
-      order: 1;
-   }
-
-   #home .text {
-      order: 0;
-      max-width: 24rem;
-      text-align: left;
-   }
-
-   /* About: Ajusta o layout do contêiner e alinhamento */
-   #about .container {
-      margin: 0 auto;
-      grid-auto-flow: column;
-   }
-
-   /* Services: Ajusta o layout das cartas de serviço */
-   .cards {
-      grid-template-columns: 1fr 1fr 1fr;
-   }
-
-   .card {
-      padding-left: 3rem;
-      padding-right: 3rem;
-   }
-
-   /* Testimonials: Ajusta a margem do contêiner de depoimentos */
-   #testimonials .container {
-      margin-left: auto;
-      margin-right: auto;
-   }
-
-   /* Contact: Ajusta o layout do contêiner e o texto */
-   #contact .container {
-      grid-auto-flow: column;
-      align-items: center;
-   }
-
-   #contact .text {
-      max-width: 25rem;
-   }
-
-   /* Footer: Ajusta o padding da seção de rodapé e o layout do contêiner */
-   footer.section {
-      padding: 3.75rem 0;
-   }
-
-   footer .container {
-      grid-auto-flow: column;
-      align-items: center;
-      justify-content: space-between;
-   }
-
-   footer .logo {
-      font-size: 2.25rem;
-   }
-}
-
-/* large devices: 992px e acima */
-@media (min-width: 992px) {
-
-   /* Ajusta o tamanho da fonte dos títulos e subtítulos */
-   :root {
-      --title-font-size: 2.25rem;
-      --subtitle-font-size: 1.125rem;
-   }
-}
-
-/* medium devices: até 480px */
-@media (max-width: 480px) {
-
+    /* Ajusta a largura máxima do contêiner e centraliza o conteúdo */
+    .container {
+       max-width: 1120px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+ 
+    /* Aumenta o padding das seções */
+    .section {
+       padding: 10rem 0;
+    }
+ 
+    /* Centraliza o texto no cabeçalho das seções e depoimentos */
+    .section header,
+    #testimonials header {
+       max-width: 40rem;
+       text-align: center;
+       margin-left: auto;
+       margin-right: auto;
+    }
+ 
+    /* Ajusta a altura do botão */
+    .button {
+       height: 3.125rem;
+    }
+ 
+    /* Torna o menu de navegação visível e ajusta o layout do menu */
+    nav .menu {
+       opacity: 1;
+       visibility: visible;
+       top: 0;
+    }
+ 
+    nav .menu ul {
+       display: flex;
+       gap: 2rem;
+    }
+ 
+    nav .menu ul li a.title {
+       font: 400 1rem var(--body-font);
+       -webkit-font-smoothing: antialiased;
+    }
+ 
+    nav .menu ul li a.title.active {
+       font-weight: bold;
+       -webkit-font-smoothing: auto;
+    }
+ 
+    /* Oculta o ícone do menu */
+    nav .icon-menu {
+       display: none;
+    }
+ 
+    /* Ajusta a margem superior do conteúdo principal para compensar o cabeçalho fixo */
+    main {
+       margin-top: var(--header-height);
+    }
+ 
+    /* Home: Ajusta a disposição do texto e da imagem */
+    #home .container {
+       grid-auto-flow: column;
+       justify-content: space-between;
+       margin: 0 auto;
+    }
+ 
+    #home .image {
+       order: 1;
+    }
+ 
+    #home .text {
+       order: 0;
+       max-width: 24rem;
+       text-align: left;
+    }
+ 
+    /* About: Ajusta o layout do contêiner e alinhamento */
+    #about .container {
+       margin: 0 auto;
+       grid-auto-flow: column;
+    }
+ 
+    /* Services: Ajusta o layout das cartas de serviço */
+    .cards {
+       grid-template-columns: 1fr 1fr 1fr;
+    }
+ 
+    .card {
+       padding-left: 3rem;
+       padding-right: 3rem;
+    }
+ 
+    /* Testimonials: Ajusta a margem do contêiner de depoimentos */
+    #testimonials .container {
+       margin-left: auto;
+       margin-right: auto;
+    }
+ 
+    /* Contact: Ajusta o layout do contêiner e o texto */
+    #contact .container {
+       grid-auto-flow: column;
+       align-items: center;
+    }
+ 
+    #contact .text {
+       max-width: 25rem;
+    }
+ 
+    /* Footer: Ajusta o padding da seção de rodapé e o layout do contêiner */
+    footer.section {
+       padding: 3.75rem 0;
+    }
+ 
+    footer .container {
+       grid-auto-flow: column;
+       align-items: center;
+       justify-content: space-between;
+    }
+ 
+    footer .logo {
+       font-size: 2.25rem;
+    }
+ }
+ 
+ /* large devices: 992px e acima */
+ @media (min-width: 992px) {
+    /* Ajusta o tamanho da fonte dos títulos e subtítulos */
+    :root {
+       --title-font-size: 2.25rem;
+       --subtitle-font-size: 1.125rem;
+    }
+ }
+ 
+ /* medium devices: até 480px */
+ @media (max-width: 480px) {
+   
    body {
       overflow-x: hidden;
    }
 
-   #testimonials {
+   .section header, #testimonials {
+      max-width: 21rem;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+   #testimonials, .container, .card, section {
       overflow-x: hidden;
       /* Evita o overflow horizontal */
-   }
-
-   #testimonials .container {
       max-width: 100%;
       /* Garante que o contêiner não exceda a largura da tela */
-      box-sizing: border-box;
-      /* Inclui o padding e a borda no cálculo da largura */
-   }
-
-   #testimonials .card {
       flex: 0 0 auto;
       /* Evita que os cards se estiquem além do seu tamanho original */
       width: 100%;
       /* Ajusta a largura dos cards */
    }
 
-   /* Ajusta o tamanho do iframe do mapa em dispositivos pequenos */
-   iframe {
-      width: 400px;
-      height: 250px;
-      border: none;
-      border-radius: 10px;
-   }
-}
+    /* Ajusta o tamanho do iframe do mapa em dispositivos pequenos */
+    iframe {
+       width: 400px;
+       height: 250px;
+       border: none;
+       border-radius: 10px;
+    }
+ }
