@@ -61,6 +61,7 @@
     color: var(--text-color); /* Cor do texto principal */
     background: var(--body-color); /* Cor de fundo do corpo */
     -webkit-font-smoothing: antialiased; /* Melhora a renderização da fonte em navegadores WebKit */
+    overflow-x: hidden;
  }
  
  /* Contêiner para o logo, alinhado verticalmente no centro */
@@ -100,7 +101,7 @@
     height: 1px; /* Altura do divisor */
     background: #3AA79B; /* Cor do divisor */
     width: 100%; /* Largura total do divisor */
-    max-width: 1500px; /* Largura máxima do divisor */
+    max-width: 100%; /* Largura máxima do divisor */
  }
  
  /*  ------------ LAYOUT ------------- */
@@ -111,7 +112,7 @@
     margin-left: 1.5rem; /* Margem esquerda */
     margin-right: 1.5rem; /* Margem direita */
     width: 100%; /* Largura total do contêiner */
-    max-width: 1500px; /* Largura máxima do contêiner */
+    max-width: 100%; /* Largura máxima do contêiner */
  }
  
  /* Estilos para o layout de grade (grid) */
@@ -124,7 +125,7 @@
  .section {
     padding: calc(5rem + var(--header-height)) 0; /* Espaçamento superior inclui altura do cabeçalho */
     width: 100%; /* Largura total da seção */
-    max-width: 1500px; /* Largura máxima da seção */
+    max-width: 100%; /* Largura máxima da seção */
  }
  
  /* Margem inferior dos títulos dentro das seções */
@@ -149,7 +150,7 @@
     display: flex; /* Utiliza Flexbox para alinhamento interno */
  
     width: 100%; /* Largura total do cabeçalho */
-    max-width: 1500px; /* Largura máxima do cabeçalho */
+    max-width: 100%; /* Largura máxima do cabeçalho */
     position: fixed; /* Cabeçalho fixo na parte superior */
     top: 0; /* Alinhado ao topo da página */
     left: 0; /* Alinhado à esquerda da página */
