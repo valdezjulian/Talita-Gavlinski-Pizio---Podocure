@@ -593,6 +593,22 @@
  footer .social a:hover {
     transform: translateY(-8px); /* Move o link 8px para cima ao passar o mouse */
  }
+
+ .developer-credits {
+   text-align: center;
+   width: 100%;
+   margin: 1rem 0;
+}
+
+.footer-link {
+   color: var(--text-color-light);
+   text-decoration: none;
+   transition: opacity 0.3s;
+}
+
+.footer-link:hover {
+   opacity: 0.8;
+}
  
  /* Estilos para o parágrafo com a classe .paragrafo-footer */
  .paragrafo-footer {
