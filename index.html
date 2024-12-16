@@ -2,479 +2,482 @@
 <html lang="pt-br">
 
 <head>
-  <!-- Informações da Página -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Título da página, exibido na aba do navegador -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Podocure</title>
 
-  <!-- Define o favicon (ícone da página) que aparece na aba do navegador -->
   <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
-
-  <!-- Swiper -->
-  <!-- Importa o arquivo de estilos CSS do Swiper, uma biblioteca para criar sliders -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!-- Importa o script JavaScript do Swiper, necessário para a funcionalidade dos sliders -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Estilos -->
-  <!-- Link para o arquivo CSS principal da página -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Responsividade -->
-  <link rel="stylesheet" href="assets/css/responsive.css">
-
-  <!-- Fontes -->
-  <!-- Conecta ao servidor de fontes do Google para otimizar o carregamento das fontes -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-
-  <!-- Importa fontes do Google Fonts, incluindo DM Sans e Poppins -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
-
-  <!-- CABEÇALHO -->
   <header id="header">
-    <!-- Navegação principal -->
     <nav class="container">
-      <!-- Contêiner do logo -->
       <div class="logo-container">
-        <!-- Imagem do logo -->
-        <img src="assets/logo.png" class="img-logo" alt="Logo">
-
-        <!-- Link para o WhatsApp com o nome da marca -->
-        <a class="logo"
-          href="https://api.whatsapp.com/send?phone=5567984728606&text=Oi,%20eu%20quero%20marcar%20um%20hor%C3%A1rio%20com%20o%20Dr.%20Talita%20Gavlinski!">
-          Talita<span>Gavlinski</span>
-        </a>
+        <img src="assets/logo.png" class="img-logo" alt="Logo Podocure">
+        <h1>Talita<span>Gavlinski</span></h1>
       </div>
 
-      <!-- Menu de navegação -->
-      <div class="menu">
-        <ul class="grid">
-          <!-- Links para diferentes seções da página -->
-          <li><a class="title" href="#home">Início</a></li>
-          <li><a class="title" href="#about">Sobre</a></li>
-          <li><a class="title" href="#services">Especializações</a></li>
-          <li><a class="title" href="#testimonials">Depoimentos</a></li>
-          <li><a class="title" href="#contact">Contato</a></li>
-        </ul>
+      <div class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <!-- Fim do menu -->
-
-
-
-      <!--==============================================================================-->
-      <!-- *** Inativado *** -->
-
-      <!-- MODE DARK - [ Botão de Toggle para Dark Mode ] -->
-      <!-- <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"> 
-        🌙 (Ícone de lua para indicar o modo escuro) </button> -->
-
-      <!-- *** Inativado *** -->
-      <!--==============================================================================-->
-
-
-
-      <!-- Botões de alternância para abrir/fechar o menu em dispositivos móveis -->
-      <div class="toggle icon-menu"></div>
-      <div class="toggle icon-close"></div>
+      
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#servicos">Especializações</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- SEÇÃO HOME -->
-    <section class="section" id="home">
-      <!-- Contêiner para o conteúdo da seção -->
-      <div class="container grid">
-        <!-- Bloco de imagem -->
-        <div class="image">
-          <!-- Imagem principal da seção -->
-          <img src="assets/img-main.jpg"
-            alt="Uma mulher feliz, recebendo o tratamento de uma profissional de podocure" />
+  <section class="hero" id="home">
+    <div class="hero-background">
+      <img src="assets/img-main.jpg" alt="Tratamento podológico">
+    </div>
+    <div class="hero-content">
+      <div class="content-wrapper">
+        <h1>Podocure é muito<br> mais que estética,<br> é <span>SAÚDE!</span></h1>
+        <p>Devolvo o bem estar que você merece!<br>Quer saber como? Entre em contato.</p>
+        <a href="#" class="hero-button">ENTRE EM CONTATO</a>
+      </div>
+  </section>
+
+  <div class="divider-1"></div>
+
+  <section class="section" id="about">
+    <div class="container grid">
+      <div class="image">
+        <img src="assets/img-about.png" alt="Talita Gavlinski">
+      </div>
+      <div class="text">
+        <h2 class="title">Quem é Talita Gavlinski Pizio?</h2>
+        <p>Com mais de <b>10 anos de experiência</b>, combino saúde e estética aos cuidados com os pés. Como
+          especialista em onicomicose, atuo com precisão na recuperação da saúde das unhas.</p>
+        <p>Ao longo dos anos, busquei refininar minhas habilidades em técnicas avançadas na podocure, com foco em
+          <b>pacientes imunossuprimidos e idosos</b>.
+        </p>
+        <p>Minha formação inclui <b>dermatoscopia, onicoscopia e eletrocautério</b>, complementada por conhecimento em
+          <b>farmacologia</b> e <b>gel terapia curável</b>.
+        </p>
+        <p>Cada pé conta uma história, e meu compromisso é ouvi-la e oferecer o cuidado necessário.</p>
+        <p><i>"pés firmes diferenciam pousos de quedas"</i></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-2"></div>
+
+  <section class="section" id="services">
+    <div class="container">
+      <header>
+        <h2 class="title">Especializações</h2>
+        <p class="subtitle">A <strong>Talita</strong> já conquistou a confiança de inúmeros clientes,
+          graças à sua dedicação e expertise em tratamentos exclusivos.</p>
+      </header>
+
+      <div class="services-grid">
+        <!-- Profolaxia -->
+        <article class="service-card">
+          <div class="service-preview">
+            <div class="service-icon">
+              <img src="assets/profolaxia.png" alt="Profolaxia">
+            </div>
+            <h3 class="service-title">Profolaxia</h3>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              É feito uma avaliação completa dos pés, incluindo <b>limpeza</b>, <b>cuticulagem</b>, <b>lixamento
+                plantar</b> e tratamento de unhas encravadas.
+            </p>
+            <p class="service-description">
+              Em seguida, removemos os calos, hidratamos a pele e fornecemos <b>orientações sobre higiene</b> e calçados
+              para prevenir problemas futuros.
+            </p>
+          </div>
+        </article>
+
+        <!-- Espiculaectomia -->
+        <article class="service-card">
+          <div class="service-preview">
+            <div class="service-icon">
+              <img src="assets/espiculaectomia.png" alt="Espiculaectomia">
+            </div>
+            <h3 class="service-title">Espiculaectomia</h3>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Realizamos uma avaliação detalhada, seguido do <b>corte</b> e <b>desinfecção</b> da unha.
+            </p>
+            <p class="service-description">
+              Em seguida, removemos a <b>espícula</b>, limpamos e desinfetamos a área afetada, aplicamos
+              <b>antissépticos</b> e fazemos um curativo adequado.
+            </p>
+            <p class="service-description">
+              Por fim, fornecemos orientações sobre <b>cuidados pós-procedimento</b> para prevenir infecções.
+            </p>
+          </div>
+        </article>
+
+        <!-- Gel Terapia Curável -->
+        <article class="service-card">
+          <div class="service-preview">
+            <div class="service-icon">
+              <img src="assets/gel-terapia.png" alt="Gel Terapia Curável">
+            </div>
+            <h3 class="service-title">Gel Terapia Curável</h3>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Essa técnica serve para tratar diversas condições que afetam os pés, principalmente problemas relacionados
+              às <b>unhas</b> e <b>pele</b>.
+            </p>
+            <p class="service-description">
+              A técnica envolve a aplicação de um gel específico que é curado através de <b>luz UV</b> ou <b>LED</b>,
+              criando uma <b>camada protetora e terapêutica</b>.
+            </p>
+          </div>
+        </article>
+
+        <!-- Órtese -->
+        <article class="service-card">
+          <div class="service-preview">
+            <div class="service-icon">
+              <img src="assets/órtese.png" alt="Órtese">
+            </div>
+            <h3 class="service-title">Órtese</h3>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Procedimento com cuticulagem, limpeza, lixamento plantar, e tratamento de <b>onicofose</b> e unhas
+              encravadas.
+            </p>
+            <p class="service-description">
+              No procedimento, cortamos e removemos calos, aplicamos <b>hidratação</b> e fazemos o <b>ajuste da
+                órtese</b>.
+            </p>
+            <p class="service-description">
+              Por fim, garantimos um <b>acompanhamento periódico</b> para a saúde contínua dos pés.
+            </p>
+          </div>
+        </article>
+
+        <!-- Peeling Químico -->
+        <article class="service-card">
+          <div class="service-preview">
+            <div class="service-icon">
+              <img src="assets/peeling.png" alt="Peeling Químico">
+            </div>
+            <h3 class="service-title">Peeling Químico</h3>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              Aplicamos uma <b>solução química</b> para remover as <b>camadas superficiais</b> da pele, monitoramos a
+              reação e neutralizamos o produto.
+            </p>
+            <p class="service-description">
+              Finalizando com <b>hidratante</b> e <b>proteção solar</b>, além de orientações sobre <b>cuidados
+                pós-procedimento</b>.
+            </p>
+          </div>
+        </article>
+
+        <!-- Onicomicose -->
+        <article class="service-card">
+          <div class="service-preview">
+            <div class="service-icon">
+              <img src="assets/onicomicose.png" alt="Onicomicose">
+            </div>
+            <h3 class="service-title">Onicomicose</h3>
+          </div>
+          <div class="service-content">
+            <p class="service-description">
+              O tratamento pode incluir <b>antifúngicos orais</b>, que agem de dentro para fora, ou <b>tópicos</b>,
+              aplicados diretamente na unha.
+            </p>
+            <p class="service-description">
+              Em casos mais graves, pode-se usar <b>laser</b> para destruir os fungos ou remover a unha afetada.
+            </p>
+            <p class="service-description">
+              Obs: Manter os pés <b>limpos</b> e <b>secos</b> também é crucial para evitar a infecção.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Divisor para separação visual entre seções - "03" -->
+  <div class="divider-1"></div>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <header>
+        <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+      </header>
+
+      <div class="testimonials swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Depoimento 1 -->
+          <div class="testimonial swiper-slide">
+            <div class="floating-card">
+              <div class="testimonial-header">
+                <img src="assets/01-depoimento.png" alt="Greice Oliveira" class="client-photo">
+                <div class="client-details">
+                  <h3>Greice Oliveira</h3>
+                  <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <p>Eu super recomendo o trabalho da Talita de olhos fechados! O ambiente é muito acolhedor e uma
+                  profissional com uma excelência ímpar.</p>
+              </div>
+              <div class="testimonial-footer">
+                <span class="verified">✓ Cliente Verificado</span>
+                <span class="date">2 semanas atrás</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="testimonial swiper-slide">
+            <div class="floating-card">
+              <div class="testimonial-header">
+                <img src="assets/02-depoimento.png" alt="Marcia Rocha" class="client-photo">
+                <div class="client-details">
+                  <h3>Marcia Rocha</h3>
+                  <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <p>No meu caso, a Gel Terapia foi uma solução sensacional! Eu super recomendo, especialmente quando
+                  combinada com o profissionalismo, amor e carinho que a Podocure oferece. Amooo demais! ❤️</p>
+              </div>
+              <div class="testimonial-footer">
+                <span class="verified">✓ Cliente Verificado</span>
+                <span class="date">1 mês atrás</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="testimonial swiper-slide">
+            <div class="floating-card">
+              <div class="testimonial-header">
+                <img src="assets/03-depoimento.png" alt="Viviane Priscila" class="client-photo">
+                <div class="client-details">
+                  <h3>Viviane Priscila</h3>
+                  <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <p>O ambiente é muito acolhedor e uma profissional de uma excelência ímpar. Cuida dos meus pés com todo
+                  o carinho. Simplesmente top! 🔝</p>
+              </div>
+              <div class="testimonial-footer">
+                <span class="verified">✓ Cliente Verificado</span>
+                <span class="date">3 semanas atrás</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 4 -->
+          <div class="testimonial swiper-slide">
+            <div class="floating-card">
+              <div class="testimonial-header">
+                <img src="assets/04-depoimento.png" alt="Julian Valdez" class="client-photo">
+                <div class="client-details">
+                  <h3>Julian Valdez</h3>
+                  <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <p>A Talita é sensacional! Cuida dos meus pés com uma habilidade incrível e sempre com um sorriso no
+                  rosto. Ela é uma excelente profissional, super capacitada e faz a gente se sentir à vontade durante o
+                  atendimento. 😁</p>
+              </div>
+              <div class="testimonial-footer">
+                <span class="verified">✓ Cliente Verificado</span>
+                <span class="date">1 semana atrás</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Bloco de texto -->
-        <div class="text">
-          <!-- Título da seção -->
-          <h2 class="title">Podocure é muito mais que estética,<br>é <span class="p-saúde">SAÚDE!</span></h2>
 
-          <!-- Parágrafo de introdução -->
-          <p>Devolvo o bem estar que você merece!<br>Quer saber como? Entre em contato.</p>
+        <!-- Paginação -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
 
-          <!-- Botão para agendar um horário -->
-          <a class="button"
-            href="https://api.whatsapp.com/send?phone=5567984728606&text=Oi,%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Talita%20Gavlinski%20Pizio!%20%F0%9F%98%80">
-            Entre em contato
+
+  <!-- Divisor para separação visual entre seções - "04" -->
+  <div class="divider-2"></div>
+
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <header>
+        <h2 class="title">Vamos cuidar da sua saúde?</h2>
+        <p class="subtitle">Entre em contato e agende sua consulta</p>
+      </header>
+
+      <div class="contact-wrapper">
+        <!-- Info Box -->
+        <div class="info-box">
+          <div class="contact-info">
+            <div class="info-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z" />
+                <circle cx="12" cy="9" r="2.5" fill="currentColor" />
+              </svg>
+              <div class="info-content">
+                <h3>Localização</h3>
+                <p>Campo Grande, MS</p>
+                <p>Rua Example, 123</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" />
+              </svg>
+              <div class="info-content">
+                <h3>WhatsApp</h3>
+                <p>(67) 98472-8606</p>
+                <small>Seg à Sex - 8h às 18h</small>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm6 12.56c0 1.8-1.46 3.26-3.26 3.26h-5.48c-1.8 0-3.26-1.46-3.26-3.26v-5.12c0-1.8 1.46-3.26 3.26-3.26h5.48c1.8 0 3.26 1.46 3.26 3.26v5.12z" />
+                <circle cx="12" cy="12" r="3" fill="currentColor" />
+                <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
+              </svg>
+              <div class="info-content">
+                <h3>Redes Sociais</h3>
+                <a href="https://www.instagram.com/talitapizio.podocure/" class="social-link" target="_blank">
+                  @talitapizio.podocure
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://api.whatsapp.com/send?phone=5567984728606" class="contact-button" target="_blank">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Agendar Consulta
           </a>
         </div>
-      </div>
-    </section>
 
-
-    <!-- Divisor para separação visual entre seções - "01" -->
-    <div class="divider-1"></div>
-
-
-    <!-- SEÇÃO ABOUT -->
-    <section class="section" id="about">
-      <!-- Contêiner para o conteúdo da seção -->
-      <div class="container grid">
-
-        <!-- Div para a imagem -->
-        <div class="image">
-          <!-- Imagem ilustrativa da seção -->
-          <img src="assets/img-about.png" alt="Uma mulher, profissional podocure em pé de braços cruzados" />
-        </div>
-
-        <!-- Div para o texto -->
-        <div class="text">
-          <!-- Título da seção -->
-          <h2 class="title">Quem é Talita Gavlinski Pizio?</h2>
-
-          <!-- Parágrafo sobre a experiência e abordagem da profissional -->
-          <p>
-            Com mais de <b>10 anos de experiência</b>, combino saúde e estética aos cuidados com os pés. Como
-            especialista em onicomicose, atuo com precisão na recuperação da saúde das unhas, essencial para o bem-estar
-            dos meus pacientes, oferecendo sempre um cuidado completo e personalizado.
-          </p>
-          <br>
-
-          <!-- Parágrafo sobre as habilidades e técnicas avançadas -->
-          <p>
-            Ao longo dos anos, busquei refininar minhas habilidades em técnicas avançadas na podocure, com um foco
-            especial em <b>pacientes imunossuprimidos e idosos</b>, oferecendo tratamentos seguros e adaptados. Minha
-            expertise abrange o uso de brocas, lixas, alta frequência, <b>kinesio taping neurofuncional</b>, além de
-            especialização em feridas e curativos.
-          </p>
-          <br>
-
-          <!-- Parágrafo sobre a formação e técnicas adicionais -->
-          <p>
-            Minha formação inclui <b>dermatoscopia, onicoscopia e eletrocautério</b>, complementada por um sólido
-            conhecimento em <b>farmacologia</b> aplicada à podologia e a <b>gel terapia curável</b>, uma técnica
-            inovadora que trata diversas condições dos pés, proporcionando alívio e resultados efetivos.
-          </p>
-          <br>
-
-          <!-- Parágrafo sobre o compromisso -->
-          <p>
-            Cada pé conta uma história, e meu compromisso é ouvi-la e oferecer o cuidado necessário para que seus passos
-            sejam sempre firmes e seguros. Mais do que técnica, ofereço bem-estar, confiança e uma qualidade de vida
-            superior.
-          </p>
-          <br>
-
-          <!-- Parágrafo final sobre filosofia -->
-          <p>Afinal, <i>"pés firmes diferenciam pousos de quedas"</i>.</p>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Divisor para separação visual entre seções - "02" -->
-    <div class="divider-2"></div>
-
-
-    <!-- SERVICES -->
-    <section class="section" id="services">
-      <!-- Contêiner para o conteúdo da seção -->
-      <div class="container grid">
-        <!-- Cabeçalho da seção -->
-        <header>
-          <!-- Título da seção -->
-          <h2 class="title">Especializações</h2>
-
-          <!-- Subtítulo com destaque para a profissional -->
-          <p class="subtitle">
-            A <strong>Talita</strong> já conquistou a confiança de inúmeros clientes, graças à sua dedicação e
-            expertise em tratamentos exclusivos e altamente especializados. Sua abordagem cuidadosa e conhecimento
-            técnico garantem resultados excepcionais, tornando-a uma referência na área.
-          </p>
-        </header>
-
-        <!-- Contêiner para os cartões de serviços -->
-        <div class="cards grid">
-
-          <!-- Cartão de serviço 1: Profolaxia -->
-          <div class="card">
-            <!-- Ícone representativo do serviço -->
-            <i class=""></i>
-            <img class="img-services" src="assets/profolaxia.png">
-            <!-- Título do serviço -->
-            <h3 class="title">Profolaxia</h3>
-            <!-- Descrição do serviço -->
-            <p>
-              É feito uma avaliação completa dos pés, incluindo limpeza, cuticulagem, lixamento plantar e tratamento de
-              unhas encravadas.
-              <br><br>
-              Em seguida, semovemos os calos, hidratamos a pele e fornecemos orientações sobre higiene e calçados para
-              prevenir problemas futuros e manter a saúde dos pés.
-            </p>
-          </div>
-
-          <!-- Cartão de serviço 2: Espiculaectomia -->
-          <div class="card">
-            <!-- Ícone representativo do serviço -->
-            <i class=""></i>
-            <img class="img-services" src="assets/espiculaectomia.png">
-            <!-- Título do serviço -->
-            <h3 class="title">Espiculaectomia</h3>
-            <!-- Descrição do serviço -->
-            <p>
-              Realizamos uma avaliação detalhada, seguido do corte e desinfecção da unha.<br><br>
-              Em seguida, removemos a espícula (parte encravada da unha), limpamos e desinfetamos a área afetada,
-              aplicamos antissépticos e fazemos um curativo adequado.<br><br>
-              Por fim, fornecemos orientações sobre cuidados pós-procedimento para prevenir infecções e garantir uma
-              recuperação adequada.
-            </p>
-          </div>
-
-          <!-- Cartão de serviço 3: Gel Terapia Curável -->
-          <div class="card">
-            <!-- Ícone representativo do serviço -->
-            <i class=""></i>
-            <img class="img-services" src="assets/gel-terapia.png">
-            <!-- Título do serviço -->
-            <h3 class="title">Gel Terapia Curável</h3>
-            <!-- Descrição do serviço -->
-            <p>
-              Essa técnica serve para tratar diversas condições que afetam os pés, principalmente problemas relacionados
-              às unhas e pele.<br><br>
-              A técnica envolve a aplicação de um gel específico que é curado (endurecido) através de luz UV ou LED,
-              criando uma camada protetora e terapêutica.
-            </p>
-          </div>
-
-          <!-- Cartão de serviço 4: Órtese -->
-          <div class="card">
-            <!-- Ícone representativo do serviço -->
-            <i class=""></i>
-            <img class="img-services" src="assets/órtese.png">
-            <!-- Título do serviço -->
-            <h3 class="title">Órtese</h3>
-            <!-- Descrição do serviço -->
-            <p>
-              Procedimento com cuticulagem, limpeza, lixamento plantar, e tratamento de onicofose e unhas
-              encravadas.<br><br>
-              No procedimento, cortamos e removemos calos, hidratamos a pele e ajustamos a órtese.<br><br>
-              Por fim, orientamos sobre higiene, calçados e uso da órtese, além de acompanhamento periódico para
-              garantir a saúde contínua dos pés.
-            </p>
-          </div>
-
-          <!-- Cartão de serviço 5: Peeling Químico -->
-          <div class="card">
-            <!-- Ícone representativo do serviço -->
-            <i class=""></i>
-            <img class="img-services" src="assets/peeling.png">
-            <!-- Título do serviço -->
-            <h3 class="title">Peeling Químico</h3>
-            <!-- Descrição do serviço -->
-            <p>
-              Aplicamos uma solução química para remover as camadas superficiais da pele, monitoramos a reação e, em
-              seguida, enxaguamos e neutralizamos o produto.<br><br>
-              Finalizando com hidratante e proteção solar, além de fornecer orientações sobre cuidados pós-procedimento
-              para melhorar a saúde e aparência dos pés.
-            </p>
-          </div>
-
-          <!-- Cartão de serviço 6: Onicomicose -->
-          <div class="card">
-            <!-- Ícone representativo do serviço -->
-            <i class=""></i>
-            <img class="img-services" src="assets/onicomicose.png">
-            <!-- Título do serviço -->
-            <h3 class="title">Onicomicose</h3>
-            <!-- Descrição do serviço -->
-            <p>
-              O tratamento pode incluir antifúngicos orais, que agem de dentro para fora, ou tópicos, aplicados
-              diretamente na unha.<br><br>
-              Em casos mais graves, pode-se usar laser para destruir os fungos ou remover a unha afetada.<br><br>
-              Obs: Manter os pés limpos e secos também é crucial para evitar a infecção.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Divisor para separação visual entre seções - "03" -->
-    <div class="divider-1"></div>
-
-
-    <!-- TESTIMONIALS -->
-    <section class="section" id="testimonials">
-      <!-- Contêiner para o conteúdo da seção -->
-      <div class="container">
-        <!-- Cabeçalho da seção -->
-        <header>
-          <!-- Título da seção -->
-          <h2 class="title">Depoimentos de quem já passou por aqui</h2>
-        </header>
-
-        <!-- Contêiner para o carrossel de depoimentos (Swiper) -->
-        <div class="testimonials swiper-container">
-          <!-- Wrapper para os slides do carrossel -->
-          <div class="swiper-wrapper">
-
-            <!-- Slide de depoimento 1 -->
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <!-- Texto do depoimento -->
-                <p>
-                  <span>&ldquo;</span>
-                  Eu super recomendo o trabalho da Talita de olhos fechados! 🙈<br>
-                  Ela realiza os procedimentos com extremo cuidado, utilizando sempre materiais esterilizados<br>
-                  e de alta qualidade. Depois de experimentar o tratamento dela, não consigo mais ficar sem.<br>
-                  A diferença na saúde dos meus pés é visível e impressionante!
-                </p>
-                <br>
-                <!-- Autor do depoimento -->
-                <strong>⭐⭐⭐⭐⭐</strong>
-                <cite>
-                  <img src="assets/01-depoimento.png" alt="Foto de cliente" />
-                  Greice Oliveira
-                </cite>
-              </blockquote>
-            </div>
-
-            <!-- Slide de depoimento 2 -->
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <!-- Texto do depoimento -->
-                <p>
-                  <span>&ldquo;</span>
-                  No meu caso, a Gel Terapia foi uma solução sensacional!<br>
-                  Eu super recomendo, especialmente quando combinada com o<br>
-                  profissionalismo, amor e carinho que a Podocure oferece.<br>
-                  Amooo demais! ❤️
-                </p>
-                <br>
-                <!-- Autor do depoimento -->
-                <strong>⭐⭐⭐⭐⭐</strong>
-                <cite>
-                  <img src="assets/02-depoimento.png" alt="Foto de cliente" />
-                  Marcia Rocha
-                </cite>
-              </blockquote>
-            </div>
-
-            <!-- Slide de depoimento 3 -->
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <!-- Texto do depoimento -->
-                <p>
-                  <span>&ldquo;</span>
-                  O ambiente é muito acolhedor e uma profissional de uma excelência ímpar.<br>
-                  Cuida dos meus pés com todo o carinho. Simplesmente top! 🔝
-                </p>
-                <br>
-                <!-- Autor do depoimento -->
-                <strong>⭐⭐⭐⭐⭐</strong>
-                <cite>
-                  <img src="assets/03-depoimento.png" alt="Foto de cliente" />
-                  Viviane Priscila
-                </cite>
-              </blockquote>
-            </div>
-
-            <!-- Slide de depoimento 4 -->
-            <div class="testimonial swiper-slide">
-              <blockquote>
-                <!-- Texto do depoimento -->
-                <p>
-                  <span>&ldquo;</span>
-                  A Talita é sensacional! Cuida dos meus pés com uma habilidade incrível<br>
-                  e sempre com um sorriso no rosto. Ela é uma excelente profissional, super<br>
-                  capacitada e faz a gente se sentir à vontade durante o atendimento. 😁
-                </p>
-                <br>
-                <!-- Autor do depoimento -->
-                <strong>⭐⭐⭐⭐⭐</strong>
-                <cite>
-                  <img src="assets/04-depoimento.png" alt="Foto de cliente" />
-                  Julian Valdez
-                </cite>
-              </blockquote>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Divisor para separação visual entre seções - "04" -->
-    <div class="divider-2"></div>
-
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="container grid">
-
-        <!-- Seção de texto para informações de contato -->
-        <div class="text">
-          <!-- Título da seção -->
-          <h2 class="title">Entre em contato!</h2>
-          <!-- Parágrafo com informações e convite para contato -->
-          <p>
-            Quero tirar suas dúvidas, ouvir<br> suas críticas e sugestões.<br> Vamos marcar a sua consulta?
-          </p>
-          <!-- Link para marcar um horário via WhatsApp -->
-          <a href="https://api.whatsapp.com/send?phone=5567984728606&text=Oi,%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Talita%20Gavlinski%20Pizio!%20%F0%9F%98%80"
-            class="button" target="_blank"><i class="icon-whatsapp"></i>Marque seu horário</a>
-        </div>
-
-        <!-- Seção do mapa -->
-        <div class="map">
-          <!-- Iframe do Google Maps com a localização -->
+        <!-- Map Box -->
+        <div class="map-box">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14951.110384558307!2d-54.6042049!3d-20.4743259!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e922caa57209%3A0xee1c57345300187f!2sTalita%20Gavlinski%20Pizio!5e0!3m2!1spt-BR!2sbr!4v1724332204751!5m2!1spt-BR!2sbr"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3737.7778275369574!2d-54.6042129!3d-20.474316399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e922caa57209%3A0xee1c57345300187f!2sTalita%20Gavlinski%20Pizio%20-%20Podocure%20%F0%9F%91%A3!5e0!3m2!1spt-BR!2sbr!4v1734211490542!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <!-- Divisor para separação visual entre seções - "05" -->
-    <div class="divider-1"></div>
+  <div class="divider-1"></div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="section">
-    <div class="container grid">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Área 1: Logo e Descrição -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <img src="assets/logo.png" alt="Logo Podocure" class="footer-logo-img">
+            <h2 class="logo-text">Talita<span>Gavlinski</span></h2>
+          </a>
+          <p class="footer-description">
+            <strong>Podocure</strong> é muito mais que <span>estética</span>, é <strong>saúde!</strong> Cuidando dos seus <span>pés</span> com <span>profissionalismo</span> e <span>dedicação</span>.
+          </p>
+        </div>
 
-      <div class="brand">
-        <a class="logo logo-alt" href="#home">Talita <span>Gavlinski</span></a>
-        <div class="paragrafo-footer">
+        <!-- Área 2: Menu -->
+        <div class="footer-links">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Especializações</a></li>
+            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
         </div>
-        <div class="developer-credits">
-          <a href="https://www.freelings.com.br/" target="_blank" class="footer-link">©2024 Desenvolvido por Freelings
-            Co®.</a>
+
+        <!-- Área 3: Contato -->
+        <div class="footer-contact">
+          <h3>Contato</h3>
+          <div class="contact-info">
+            <a href="https://maps.app.goo.gl/..." class="contact-item" target="_blank">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 0C7.6 0 4 3.6 4 8c0 5.4 8 16 8 16s8-10.6 8-16c0-4.4-3.6-8-8-8zm0 12c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" />
+              </svg>
+              Campo Grande, MS
+            </a>
+            <a href="https://wa.me/5567984728606" class="contact-item" target="_blank">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              (67) 98472-8606
+            </a>
+            <a href="https://www.instagram.com/talitapizio.podocure/" class="contact-item" target="_blank">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+              </svg>
+              @talitapizio.podocure
+            </a>
+          </div>
         </div>
-        <p>Todos os direitos reservados.</p>
       </div>
 
+      <!-- Linha Divisória -->
+      <div class="footer-divider"></div>
 
-
-      <div class="social grid">
-        <a href="https://www.instagram.com/talitapizio.podocure/" target="_blank">
-          <img class="instagram" src="assets/instagram.png" alt="logo instagram">
+      <!-- Área de Copyright -->
+      <div class="footer-bottom">
+        <p class="copyright">© 2024 Talita Gavlinski.<br> Todos os direitos reservados.</p>
+        <a href="https://portfolio-valdez-julian.vercel.app/" target="_blank" class="developer-credits">
+          <span>Desenvolvido por Julian Valdez</span>
         </a>
       </div>
     </div>
   </footer>
 
-  <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
 
-  <!-- script.js -->
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top" aria-label="Voltar ao topo">
+    <img src="assets/back-to-top.png" alt="Ícone de pé" class="foot-icon">
+  </a>
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets/script/script.js"></script>
 </body>
 

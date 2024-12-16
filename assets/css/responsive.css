@@ -1,169 +1,464 @@
-/*  ------------ MEDIA QUERIES ------------- */
+/* =================== MEDIA QUERIES =================== */
 
-/* extra large devices: 1200px e acima */
-@media (min-width: 1200px) {
-    /* Ajusta a largura máxima do contêiner e centraliza o conteúdo */
-    .container {
-       max-width: 1120px;
-       margin-left: auto;
-       margin-right: auto;
-    }
- 
-    /* Aumenta o padding das seções */
-    .section {
-       padding: 10rem 0;
-    }
- 
-    /* Centraliza o texto no cabeçalho das seções e depoimentos */
-    .section header,
-    #testimonials header {
-       max-width: 40rem;
-       text-align: center;
-       margin-left: auto;
-       margin-right: auto;
-    }
- 
-    /* Ajusta a altura do botão */
-    .button {
-       height: 3.125rem;
-    }
- 
-    /* Torna o menu de navegação visível e ajusta o layout do menu */
-    nav .menu {
-       opacity: 1;
-       visibility: visible;
-       top: 0;
-    }
- 
-    nav .menu ul {
-       display: flex;
-       gap: 2rem;
-    }
- 
-    nav .menu ul li a.title {
-       font: 400 1rem var(--body-font);
-       -webkit-font-smoothing: antialiased;
-    }
- 
-    nav .menu ul li a.title.active {
-       font-weight: bold;
-       -webkit-font-smoothing: auto;
-    }
- 
-    /* Oculta o ícone do menu */
-    nav .icon-menu {
-       display: none;
-    }
- 
-    /* Ajusta a margem superior do conteúdo principal para compensar o cabeçalho fixo */
-    main {
-       margin-top: var(--header-height);
-    }
- 
-    /* Home: Ajusta a disposição do texto e da imagem */
-    #home .container {
-       grid-auto-flow: column;
-       justify-content: space-between;
-       margin: 0 auto;
-    }
- 
-    #home .image {
-       order: 1;
-    }
- 
-    #home .text {
-       order: 0;
-       max-width: 24rem;
-       text-align: left;
-    }
- 
-    /* About: Ajusta o layout do contêiner e alinhamento */
-    #about .container {
-       margin: 0 auto;
-       grid-auto-flow: column;
-    }
- 
-    /* Services: Ajusta o layout das cartas de serviço */
-    .cards {
-       grid-template-columns: 1fr 1fr 1fr;
-    }
- 
-    .card {
-       padding-left: 3rem;
-       padding-right: 3rem;
-    }
- 
-    /* Testimonials: Ajusta a margem do contêiner de depoimentos */
-    #testimonials .container {
-       margin-left: auto;
-       margin-right: auto;
-    }
- 
-    /* Contact: Ajusta o layout do contêiner e o texto */
-    #contact .container {
-       grid-auto-flow: column;
-       align-items: center;
-    }
- 
-    #contact .text {
-       max-width: 25rem;
-    }
- 
-    /* Footer: Ajusta o padding da seção de rodapé e o layout do contêiner */
-    footer.section {
-       padding: 3.75rem 0;
-    }
- 
-    footer .container {
-       grid-auto-flow: column;
-       align-items: center;
-       justify-content: space-between;
-    }
- 
-    footer .logo {
-       font-size: 2.25rem;
-    }
+/* Base styles for desktop first approach */
+:root {
+   --title-font-size: 2.25rem;
+   --subtitle-font-size: 1.125rem;
  }
  
- /* large devices: 992px e acima */
- @media (min-width: 992px) {
-    /* Ajusta o tamanho da fonte dos títulos e subtítulos */
-    :root {
-       --title-font-size: 2.25rem;
-       --subtitle-font-size: 1.125rem;
-    }
+ /* Oculta o botão hamburguer por padrão (desktop) */
+ .menu-button {
+   display: none;
  }
  
- /* medium devices: até 480px */
- @media (max-width: 480px) {
-   
-   body {
-      overflow-x: hidden;
+ /* Desktop First - Large Screens (1200px e acima) */
+ @media (min-width: 1200px) {
+   .container {
+     max-width: 1120px;
+     margin: 0 auto;
    }
-
-   .section header, #testimonials {
-      max-width: 21rem;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-  }
-
-   #testimonials, .container, .card, section {
-      overflow-x: hidden;
-      /* Evita o overflow horizontal */
-      max-width: 100%;
-      /* Garante que o contêiner não exceda a largura da tela */
-      flex: 0 0 auto;
-      /* Evita que os cards se estiquem além do seu tamanho original */
+ 
+   .section {
+     padding: 10rem 0;
+   }
+ 
+   .nav-links {
+     display: flex;
+     gap: 2.5rem;
+   }
+ 
+   #about .container.grid {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 4rem;
+   }
+ 
+   .services-grid {
+     grid-template-columns: repeat(3, 1fr);
+     gap: 2.5rem;
+   }
+ 
+   .contact-wrapper {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 5rem;
+   }
+ 
+   .footer-content {
+     grid-template-columns: 2fr 1fr 1fr;
+     gap: 4rem;
+   }
+ }
+ 
+ /* Laptops e Desktops menores (992px até 1199px) */
+ @media (max-width: 1199px) {
+   .container {
+     width: 90%;
+     max-width: 960px;
+     margin: 0 auto;
+   }
+ 
+   .section {
+     padding: 8rem 0;
+   }
+ 
+   /* Hero Section Adjustments */
+   .hero-content {
+     padding-left: 3%;
+   }
+ 
+   .content-wrapper {
+     max-width: 340px;
+   }
+ 
+   /* Services Grid */
+   .services-grid {
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1.5rem;
+   }
+ 
+   /* About Section */
+   #about .container.grid {
+     gap: 3rem;
+   }
+ 
+   /* Contact Section */
+   .contact-wrapper {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 3rem;
+   }
+ }
+ 
+ /* Tablets (768px até 991px) */
+ @media (max-width: 991px) {
+   :root {
+     --title-font-size: 2rem;
+     --subtitle-font-size: 1rem;
+   }
+ 
+   .section {
+     padding: 6rem 0;
+   }
+ 
+   /* Header Adjustments */
+   .logo-container h1 {
+     font-size: 1.3rem;
+   }
+ 
+   /* Hero Section */
+   .hero-background {
+      left: 20%;
+      width: 80%;
+      opacity: 0.8;
+    }
+  
+    .hero-content {
+      padding: 0 2rem;
       width: 100%;
-      /* Ajusta a largura dos cards */
-   }
-
-    /* Ajusta o tamanho do iframe do mapa em dispositivos pequenos */
-    iframe {
-       width: 400px;
-       height: 250px;
-       border: none;
-       border-radius: 10px;
+      z-index: 2;
     }
+  
+    .content-wrapper {
+      max-width: 340px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+ 
+   .content-wrapper {
+     max-width: 320px;
+     padding: 1.5rem;
+   }
+ 
+   /* About Section */
+   #about .container.grid {
+     grid-template-columns: 1fr;
+     text-align: center;
+   }
+ 
+   #about .image {
+     max-width: 400px;
+     margin: 0 auto;
+   }
+ 
+   #about .text {
+     padding-right: 0;
+   }
+ 
+   /* Services Section */
+   .services-grid {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 2rem;
+   }
+ 
+   /* Testimonials */
+   .testimonials.swiper-container {
+     padding: 0 1rem;
+   }
+ 
+   /* Contact Section */
+   .contact-wrapper {
+     grid-template-columns: 1fr;
+     gap: 3rem;
+   }
+ 
+   /* Footer */
+   .footer-content {
+     grid-template-columns: 1fr 1fr;
+     gap: 3rem;
+   }
+ }
+ 
+ /* Tablets pequenos e Celulares grandes (700px até 767px) */
+ @media (max-width: 767px) {
+   /* Menu Button */
+   .menu-button {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 30px;
+     height: 21px;
+     cursor: pointer;
+     z-index: 100;
+     margin-left: auto;
+   }
+ 
+   .menu-button span {
+     display: block;
+     width: 100%;
+     height: 3px;
+     background-color: var(--text-light);
+     transition: all 0.3s ease;
+     border-radius: 3px;
+   }
+ 
+   .menu-button.active span:nth-child(1) {
+     transform: translateY(9px) rotate(45deg);
+   }
+ 
+   .menu-button.active span:nth-child(2) {
+     opacity: 0;
+   }
+ 
+   .menu-button.active span:nth-child(3) {
+     transform: translateY(-9px) rotate(-45deg);
+   }
+ 
+   /* Mobile Navigation */
+   .nav-links {
+     position: fixed;
+     top: 0;
+     right: -100%;
+     width: 70%;
+     height: 100vh;
+     background: rgba(58, 167, 155, 0.97);
+     backdrop-filter: blur(10px);
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 2rem;
+     transition: 0.3s ease;
+     z-index: 99;
+   }
+ 
+   .nav-links.active {
+     right: 0;
+   }
+ 
+   .nav-links li {
+     opacity: 0;
+     transform: translateX(50px);
+     transition: 0.3s ease;
+   }
+ 
+   .nav-links.active li {
+     opacity: 1;
+     transform: translateX(0);
+   }
+ 
+   /* Delay na animação de cada item */
+   .nav-links li:nth-child(1) { transition-delay: 0.1s; }
+   .nav-links li:nth-child(2) { transition-delay: 0.2s; }
+   .nav-links li:nth-child(3) { transition-delay: 0.3s; }
+   .nav-links li:nth-child(4) { transition-delay: 0.4s; }
+   .nav-links li:nth-child(5) { transition-delay: 0.5s; }
+ 
+   /* Hero Section */
+   .hero {
+      min-height: calc(100vh - var(--header-height));
+      height: auto;
+      padding: 4rem 0;
+    }
+  
+    .hero-background {
+      left: 0;
+      width: 100%;
+      opacity: 0.15; /* Reduz ainda mais a opacidade para melhor legibilidade */
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
+  
+    .hero-content {
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+    }
+  
+    .content-wrapper {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 2.5rem 2rem;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(58, 167, 155, 0.1);
+      animation: none;
+      transform: none;
+    }
+  
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+  
+    .hero p {
+      font-size: clamp(0.9rem, 4vw, 1rem);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+  
+    .hero-button {
+      width: 100%;
+      justify-content: center;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+ 
+   /* Services Section */
+   .services-grid {
+     grid-template-columns: 1fr;
+     gap: 2rem;
+   }
+ 
+   /* Testimonials */
+   .testimonials .swiper-slide {
+     padding: 0.5rem;
+   }
+ }
+ 
+ @media (max-height: 600px) and (max-width: 700px) {
+   .hero {
+     min-height: auto;
+     padding: 3rem 0;
+   }
+ 
+   .content-wrapper {
+     padding: 1.5rem;
+   }
+ 
+   .hero h1 {
+     font-size: 1.5rem;
+     margin-bottom: 1rem;
+   }
+ 
+   .hero p {
+     margin-bottom: 1.5rem;
+   }
+ }
+ 
+ /* Celulares (até 480px) */
+ @media (max-width: 480px) {
+   body {
+     overflow-x: hidden;
+   }
+ 
+   :root {
+     --title-font-size: 1.75rem;
+     --subtitle-font-size: 0.9rem;
+   }
+ 
+   .section {
+     padding: 4rem 0;
+   }
+ 
+   .container {
+     width: 100%;
+     padding: 0 1.5rem;
+   }
+ 
+   /* Header */
+   .logo-container h1 {
+     font-size: 1.2rem;
+   }
+ 
+   .img-logo {
+     width: 2.5rem;
+     height: 2.5rem;
+   }
+ 
+   /* Hero Section */
+   .hero {
+      padding: 3rem 0;
+    }
+  
+    .content-wrapper {
+      padding: 2rem 1.5rem;
+    }
+  
+    .hero h1 {
+      font-size: 1.6rem;
+    }
+  
+    .hero p {
+      font-size: 0.9rem;
+    }
+  
+    .hero-button {
+      padding: 0.875rem 1.75rem;
+    }
+ 
+   /* About Section */
+   #about .title {
+     font-size: 2rem;
+   }
+ 
+   #about .image {
+     padding: 10px;
+   }
+ 
+   /* Services Section */
+   .services-grid {
+     gap: 1.5rem;
+   }
+ 
+   .service-card {
+     height: 280px;
+   }
+ 
+   /* Testimonials */
+   .testimonial-header {
+     flex-direction: column;
+     text-align: center;
+     gap: 1rem;
+   }
+ 
+   .testimonial-footer {
+     flex-direction: column;
+     align-items: center;
+     gap: 0.5rem;
+   }
+ 
+   /* Contact Section */
+   .info-box {
+     padding: 2rem;
+   }
+ 
+   .map-box {
+     height: 300px;
+   }
+ 
+   /* Footer */
+   .footer-content {
+     grid-template-columns: 1fr;
+     gap: 2rem;
+     text-align: center;
+   }
+ 
+   .footer-brand, .footer-links, .footer-contact {
+     width: 100%;
+   }
+ 
+   .footer-logo {
+     justify-content: center;
+   }
+ 
+   .contact-info {
+     align-items: center;
+   }
+ 
+   .footer-bottom {
+     flex-direction: column;
+     text-align: center;
+     gap: 1rem;
+   }
+ }
+ 
+ /* Ajustes para Impressão */
+ @media print {
+   .menu-button,
+   .nav-links,
+   .back-to-top,
+   .swiper-pagination,
+   iframe {
+     display: none;
+   }
+ 
+   .container {
+     width: 100%;
+     max-width: none;
+   }
+ 
+   * {
+     print-color-adjust: exact;
+     -webkit-print-color-adjust: exact;
+   }
  }
